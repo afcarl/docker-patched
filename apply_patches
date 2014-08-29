@@ -1,0 +1,4 @@
+#!/bin/bash
+
+### Fix RFC Compilant hosts
+sed -i 's/^config.Hostname = id[:12].*/config.Hostname = "container-" + id[:12]/' /go/src/github.com/docker/docker/daemon/daemon.go
